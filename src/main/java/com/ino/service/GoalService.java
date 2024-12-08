@@ -1,6 +1,7 @@
 package com.ino.service;
 
 import com.ino.model.Goal;
+import com.ino.repository.NewYearWishes;
 import jakarta.data.Order;
 import jakarta.data.Sort;
 import jakarta.data.page.PageRequest;
