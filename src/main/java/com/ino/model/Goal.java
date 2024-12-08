@@ -1,6 +1,6 @@
 package com.ino.model;
 
-import com.arangodb.shaded.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.json.bind.annotation.JsonbProperty;
 import com.arangodb.shaded.fasterxml.jackson.annotation.JsonPropertyOrder;
 import jakarta.nosql.Column;
 import jakarta.nosql.Entity;
@@ -11,10 +11,10 @@ import java.util.List;
 @JsonPropertyOrder({"id", "title", "description", "priority", "tasks"})
 @Entity
 public record Goal(
-    @Id @JsonProperty("id") String id,
-    @JsonProperty("title") @Column String title,
-    @JsonProperty("description") @Column String description,
-    @JsonProperty("priority") @Column String priority,
-    @JsonProperty("tasks") @Column String tasks) {}
+    @Id @JsonbProperty("id") String id,
+    @JsonbProperty("title") @Column String title,
+    @JsonbProperty("description") @Column String description,
+    @JsonbProperty("priority") @Column String priority,
+    @JsonbProperty("tasks") @Column List<String> tasks) {}
 
 
